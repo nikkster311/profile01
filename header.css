@@ -1,0 +1,214 @@
+@media (max-width: 600px) {
+  .App-header {
+      top: 0px;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+      color: #157b48;
+      background-color: #e3ede9;
+      border-bottom: 1px solid #3bb29b;
+  }
+
+  .headerIcons {
+      width: 100%;
+      font-size: 13px;
+      text-align: center;
+      font-family: Arial, Helvetica;
+      border: none;
+      cursor: pointer;
+      background-color:rgba(255, 255, 255, 0);
+  }
+
+  .headerIconsOnly {
+    justify-content: center;
+    width: 100%;
+  }
+
+  a {
+      background-color: rgba(255, 255, 255, 0);
+      color: #157b48;
+  }
+
+  a:hover {
+      background-color: rgba(255, 255, 255, 0);
+      color: #66d6d2;
+  }
+
+  .nikksterTechHeader {
+    width: 100%;
+    font-size: 38px;
+    font-family: "Allura";
+    color: #226868;
+    justify-content: center;
+    display: inline;
+    font-weight: bold;
+  }
+
+  .projHomeToggleDiv {
+    font-family: "Over+The+Rainbow";
+    background-color: #e3ede9;
+    position: relative;
+  }
+
+  .projHomeToggleBtn {
+    background-color: rgba(255, 255, 255, 0);
+    color: #157b48;
+    font-size: 20px;
+    font-family: "Kaushan Script";
+    border: 0px;
+    border-radius: 20px;
+    width: auto%;
+    right: 30px;
+    margin: 4px 6px 10px 6px;
+    padding: 0px 4px 4px 4px;
+
+  }
+
+  .projHomeToggleBtn:hover {
+    color: #157b48;
+    background-color: #66d6d2;
+  }
+
+  .App-footer{
+    height: 150px;
+    background-color: #e3ede9;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+
+  .footerIcons > p {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+.App-header {
+    grid-column: 2fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(10px, auto));
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    position: sticky;
+    color: #157b48;
+    background-color: #e3ede9;
+    border-bottom: 1px solid #3bb29b;
+}
+
+.headerIconsOnly {
+  display: inline;
+}
+
+.headerIcons {
+    font-size: 13px;
+    font-family: Arial, Helvetica;
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    background-color:rgba(255, 255, 255, 0);
+}
+
+a {
+    background-color: rgba(255, 255, 255, 0);
+    color: #157b48;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #66d6d2;
+}
+
+.nikksterTechHeader {
+  font-size: 30px;
+  font-family: "Allura";
+  color: #226868;
+  display: inline;
+  padding: 0px 15px 0px 0px;
+  font-weight: bold;
+}
+
+
+.projHomeToggleDiv {
+  font-family: "Over+The+Rainbow";
+  background-color: #e3ede9;
+  grid: -1;
+  text-align: right;
+  display: flex;
+  position: relative;
+}
+
+.projHomeToggleBtn {
+  background-color: rgba(255, 255, 255, 0);
+  color: #157b48;
+  font-size: 20px;
+  font-family: "Kaushan Script";
+  border: 0px;
+  border-radius: 20px;
+  width: auto%;
+  right: 30px;
+  margin: 4px 6px 10px 6px;
+  padding: 0px 4px 4px 4px;
+  position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.projHomeToggleBtn:hover {
+  color: #157b48;
+  background-color: #66d6d2;
+}
+
+
+
+
+
+.App-footer{
+  height: 190px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #e3ede9;
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 6fr 6fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(50px, auto));
+  float: right;
+  width: 100%;
+  position: relative;
+
+}
+
+.footerLeft {
+  grid-column: 2 / 3;
+  text-align: left;
+}
+
+.footerIcons {
+  grid-column: 3/4;
+  position: absolute;
+    right: 0px
+}
+}

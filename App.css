@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alice|Allura|Amita|Architects+Daughter|Carrois+Gothic+SC|Caveat|Charm|Cormorant+SC|Dynalight|Euphoria+Script|Gochi+Hand|Gruppo|Habibi|Handlee|IM+Fell+DW+Pica+SC|IM+Fell+French+Canon+SC|IM+Fell+Great+Primer|Julius+Sans+One|Kaushan+Script|La+Belle+Aurore|Megrim|Mr+Dafoe|Over+the+Rainbow|Overlock+SC|Patrick+Hand+SC|Poiret+One|Rock+Salt|Sacramento|Sofia|Spectral+SC|Spinnaker|Syncopate|Thasadith|Zeyada');
+
+.App {
+  grid-column: 2fr 1fr;
+  background-color: #f2fcf8;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.parallax {
+    perspective: 1px;
+    background-image: url("IMG_3491.JPG");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+.parallax-small {
+  perspective: 1px;
+  background-image: url("IMG_3491.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.parallax > p {
+    font-size: 30px;
+    background-color: rgba(119, 141, 142, 0.70);
+    border-radius: 15px;
+    padding: 18px;
+    color:aliceblue;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    background-color: #e3ede975;
+    width: 70%;
+    margin: 10px;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.parallax-small > p {
+    grid-column: 2/-2;
+    font-size: 30px;
+    background-color: rgba(119, 141, 142, 0.70);
+    border-radius: 15px;
+    padding: 18px;
+    color:aliceblue;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

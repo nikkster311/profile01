@@ -1,0 +1,161 @@
+@media (max-width: 600px) {
+
+  .LanguagesContainer{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .indvLang {
+    width:100vh;
+    height: auto;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 35px 10px 35px;
+    position: relative;
+  }
+
+  .indvLang:hover {
+    background-color: #226868;
+    color: #e3ede9;
+  }
+
+  .skillsContainer {
+    display: grid;
+  }
+
+}
+
+
+
+
+
+
+
+
+.wholeBodyContainer{
+  background-color: #333;
+  justify-content: center;
+  width: 100%;
+  animation: fadeIn 0.5s linear forwards;
+}
+
+.body {
+  justify-content: center;
+  text-align: center;
+  background-color: #f2fcf8;
+  width: 100%;
+}
+
+.bodyIntro {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 0px 0px 40px 0px;
+  background-color: #157b48;
+  color: #f2fcf8;
+
+}
+
+.skillsContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  padding: 20px;
+  background-color: #157b48;
+  color: #f2fcf8;
+}
+
+
+
+h6 {
+  font-size: 30px;
+  font-family: "Allura";
+  color: #226868;
+  display: inline;
+  padding: 0px 15px 0px 0px;
+}
+h5 {
+  font-family: "Cormorant SC";
+  color: blue;
+}
+h4 {
+  font-family: "Spectral SC";
+  font-size: 20px;
+}
+h3 {
+  font-family: "Gruppo";
+  font-size: 20px;
+}
+h2 {
+  font-family: "Poiret One";
+}
+h1 {
+  font-family: "Cormorant SC";
+  font-size: 30px;
+}
+p {
+  font-family: "Gruppo";
+  font-size: 16px;
+}
+
+
+.imgContainer {
+  font-family: "handlee";
+  background-color: #34a;
+  /* padding: 10px; */
+}
+
+.profileImg{
+  width: 200px;
+  height: auto;
+  border-radius: 90px;
+}
+
+.LanguagesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  color: #157b48;
+  background-color: #e3ede9;
+}
+
+.indvLang {
+  margin: 10px;
+  width: 15%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.indvLang:hover {
+  background-color: #226868;
+  color: #e3ede9;
+}
+
+.blurb {
+  display: inline-block;;
+  width: 70%;
+  margin: 10px;
+  justify-content: center;
+  color: #157b48;
+}
+
+.blurbP {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hi {
+  font-family: "Syncopate";
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+ 0% { opacity:0; }
+ 100% { opacity:1; }
+}
