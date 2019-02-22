@@ -4,7 +4,7 @@ import axios from 'axios';
 // import './fontawesome-free-5.7.0-web/js/all'
 //
 
-const API_PATH = 'http://localhost:3002/portfolio-01/src/api/contact/index.php';
+const API_PATH = './api/contact/index.php';
 
 class ContactPage extends React.Component {
   constructor(props) {

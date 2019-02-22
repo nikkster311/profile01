@@ -10,11 +10,11 @@ class mainPage extends React.Component {
 
       <div className="wholeBodyContainer">
         <div className="parallax-small"></div>
-        <div class="bodySect">
-          <div class="bodyIntro">
-            <img class="profileImg" src={profimgsquare} alt="Nikki" />
-            <div class="introBlurb">
-                <p class="hi">Hi, I'm Nikki.</p>
+        <div className="bodySect">
+          <div className="bodyIntro">
+            <img className="profileImg" src={profimgsquare} alt="Nikki" />
+            <div className="introBlurb">
+                <p className="hi">Hi, I'm Nikki.</p>
                 <h3>I'm a fullstack developer passionate about building things.</h3>
                 <h3>Currently based in Los Angeles, CA</h3>
             </div>
