@@ -24,6 +24,36 @@
     width: 100%;
   }
 
+  .headerMenuBtnCurrent {
+    background-color: #157b48;
+    color: #e3ede9;
+    font-size: 16px;
+    font-family: "Kaushan Script";
+    border: 0px;
+    border-radius: 20px;
+    width: auto;
+    right: 30px;
+    margin: 4px 0px 10px 0px;
+    padding: 0px 6px 2px 4px;
+  }
+
+  .headerMenuBtn {
+    background-color: rgba(255, 255, 255, 0);
+    color: #157b48;
+    font-size: 16px;
+    font-family: "Kaushan Script";
+    border: 0px;
+    border-radius: 20px;
+    width: auto;
+    right: 30px;
+    margin: 4px 0px 10px 0px;
+    padding: 0px 8px 4px 4px;
+  }
+
+  .headerMenuBtn:hover {
+    color: #66d6d2;
+  }
+
   a {
       background-color: rgba(255, 255, 255, 0);
       color: #157b48;
@@ -151,40 +181,40 @@ a:hover {
   font-weight: bold;
 }
 
-
-.projHomeToggleDiv {
-  font-family: "Over+The+Rainbow";
-  background-color: #e3ede9;
-  grid: -1;
-  text-align: right;
-  display: flex;
-  position: relative;
+.headerMenu {
+  position: absolute;
+    right: 20px;
 }
 
-.projHomeToggleBtn {
+.headerMenuBtnCurrent {
+  background-color: #157b48;
+  color: #e3ede9;
+  font-size: 20px;
+  font-family: "Kaushan Script";
+  border: 0px;
+  border-radius: 20px;
+  width: auto;
+  right: 30px;
+  margin: 4px 6px 10px 6px;
+  padding: 0px 8px 4px 4px;
+}
+
+.headerMenuBtn {
   background-color: rgba(255, 255, 255, 0);
   color: #157b48;
   font-size: 20px;
   font-family: "Kaushan Script";
   border: 0px;
   border-radius: 20px;
-  width: auto%;
+  width: auto;
   right: 30px;
   margin: 4px 6px 10px 6px;
-  padding: 0px 4px 4px 4px;
-  position: absolute;
-    top: 0px;
-    right: 15px;
+  padding: 0px 8px 4px 4px;
 }
 
-.projHomeToggleBtn:hover {
-  color: #157b48;
-  background-color: #66d6d2;
+.headerMenuBtn:hover {
+  color: #66d6d2;
 }
-
-
-
-
 
 .App-footer{
   height: 190px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import pic from './IMG_3491.JPG';
+import profimgsquare from "./profimgsquare.jpg"
 import './fontawesome-free-5.7.0-web/js/all'
 
 class mainPage extends React.Component {
@@ -8,12 +9,15 @@ class mainPage extends React.Component {
     return (
 
       <div className="wholeBodyContainer">
-        <div className="parallax-small">        </div>
-        <div className="body">
-          <div className="bodyIntro">
-            <p className="hi">Hi, I'm Nikki.</p>
-            <h3>I'm a fullstack developer passionate about building things.</h3>
-            <h3>Currently based in Los Angeles, CA</h3>
+        <div className="parallax-small"></div>
+        <div class="bodySect">
+          <div class="bodyIntro">
+            <img class="profileImg" src={profimgsquare} alt="Nikki" />
+            <div class="introBlurb">
+                <p class="hi">Hi, I'm Nikki.</p>
+                <h3>I'm a fullstack developer passionate about building things.</h3>
+                <h3>Currently based in Los Angeles, CA</h3>
+            </div>
           </div>
           <div className="parallax-small"></div>
 

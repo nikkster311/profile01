@@ -1,7 +1,6 @@
 @media (max-width: 600px) {
 
   .LanguagesContainer{
-    width: 100%;
     justify-content: center;
     text-align: center;
   }
@@ -24,6 +23,14 @@
   .skillsContainer {
     display: grid;
   }
+  .profileImg{
+    width: 300px;
+    height: auto;
+    border-radius: 40px;
+    border: 10px solid #e3ede9;
+    padding: 3px;
+    margin: 50px 0px 0px 0px;
+  }
 
 }
 
@@ -41,7 +48,7 @@
   animation: fadeIn 0.5s linear forwards;
 }
 
-.body {
+.bodySect {
   justify-content: center;
   text-align: center;
   background-color: #f2fcf8;
@@ -153,6 +160,16 @@ p {
   font-family: "Syncopate";
   font-size: 50px;
   font-weight: bold;
+}
+
+/* below is for minwidth 600 media */
+.profileImg{
+  width: 40vh;
+  height: auto;
+  border-radius: 40px;
+  border: 10px solid #e3ede9;
+  padding: 3px;
+  margin: 50px 0px 0px 0px;
 }
 
 @keyframes fadeIn {
