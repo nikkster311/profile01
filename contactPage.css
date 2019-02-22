@@ -1,0 +1,58 @@
+@media (max-width: 600px) {
+
+  .contactForm {
+      box-sizing: border-box;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 500;
+      padding-bottom: 20px;
+  }
+}
+
+.contactPgContainer > p {
+  width: 100%;
+  padding: 12px 50px 12px 50px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contactForm {
+    box-sizing: border-box;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+label {
+  font-family: "Spectral SC";
+}
+
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    font-family: "Spectral SC";
+    background-color: #157b48;
+    color: #e3ede9;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #66d6d2;
+    color: #157b48;
+}
