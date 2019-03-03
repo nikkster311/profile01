@@ -4,7 +4,7 @@ import axios from 'axios';
 // import './fontawesome-free-5.7.0-web/js/all'
 //
 
-const API_PATH = './api/contact/index.php';
+const API_PATH = './index.php';
 
 class ContactPage extends React.Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class ContactPage extends React.Component {
       firstname: "",
       lastname: "",
       email: "",
+      subject: "",
       message: "",
       error: "",
       mailsent: ""
@@ -40,8 +41,8 @@ class ContactPage extends React.Component {
   render() {
     return(
       <div className="contactPgContainer">
-        <p>CONTACT ME Please reach out with thoughts, questions, or concerns.   We'd love to hear from you. Click here to subscribe to our newsletter. </p>
-        <p> BY EMAIL If you have a question, work enquiry or anything else, please don\'t hesitate to write to claire@coullon.com or use the form below. I do my best to reply within 1-2 working days.</p>
+        <h2>CONTACT ME</h2>
+        <p>I'd love to hear from you! Please reach out with inquiries, thoughts, questions, or concerns. Use the form below or write to nikki@nikkster.tech. You'll receive a reply within 1-2 working days.</p>
         <section className="contactForm">
           <div>
             <form onSubmit={this.handleSubmit}>
@@ -67,6 +68,14 @@ class ContactPage extends React.Component {
                 placeholder="Your email"
                 value={this.state.email}
                 onChange={e => this.setState({email: e.target.value})}/>
+              <label>Subject</label>
+              <input
+                type="subject"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                value={this.state.subject}
+                onChange={e => this.setState({sbject: e.target.value})} />
               <label>Message</label>
               <textarea
                 id="subject"

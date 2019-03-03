@@ -1,37 +1,93 @@
 import React from 'react';
 import './fontawesome-free-5.7.0-web/js/all'
-import pic from "./IMG_3491.JPG"
-// import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alice|Allura|Amita|Architects+Daughter|Carrois+Gothic+SC|Caveat|Charm|Cormorant+SC|Dynalight|Euphoria+Script|Gochi+Hand|Gruppo|Habibi|Handlee|IM+Fell+DW+Pica+SC|IM+Fell+French+Canon+SC|IM+Fell+Great+Primer|Julius+Sans+One|Kaushan+Script|La+Belle+Aurore|Megrim|Mr+Dafoe|Over+the+Rainbow|Overlock+SC|Patrick+Hand+SC|Poiret+One|Rock+Salt|Sacramento|Sofia|Spectral+SC|Spinnaker|Syncopate|Thasadith|Zeyada');
+import "./projectsPage.css"
+
+
+const projLinkList = [
+  {name: "The Other Four", link: "https://nikkster311.github.io/the-other-four-v-01"}
+]
+
+var projNames = projLinkList.map(x => x.name);
+console.log(projNames)
+var projLinks = projLinkList.map(x => x.link);
+console.log(projLinks)
 
 class ProjectsPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      displayModal: false,
+      projLink: "",
+      projName: []
+    }
+  this.projectClickHandler = this.projectClickHandler.bind(this);
+  this.exitModalHandler = this.exitModalHandler.bind(this);
+  this.assignProjLink = this.assignProjLink.bind(this);
+
+
+  }
+
+//goes through projLinkList, finds name, assigns respective link to projLink
+  assignProjLink = () => {
+    console.log(this.state)
+    console.log("assignProjLink starting..")
+    for (var key in projNames) {
+      console.log("key: " + key + ", projNames[key]: " + projNames[key] + ", this.state.projName: " + this.state.projName)
+      if (projNames[key] === this.state.projName) {
+        var projLink = projLinks[key]
+      }
+    }
+  this.setState({link: projLink})
+  }
+
+//displays modal, sets project name to value of button clicked, runs assignProjLink
+  projectClickHandler(e) {
+    console.log("running projectClickHandler..")
+    console.log("e.target.innerHTML = " + e.target.innerHTML)
+    this.setState({displayModal: true})
+    this.setState({projName: e.target.innerHTML}, () => {
+      console.log(this.state)
+    })
+    console.log("running assignProjLink..")
+    this.assignProjLink();
+  }
+
+//turns off modal
+  exitModalHandler = () => {
+    this.setState({displayModal: false})
+  }
+
 
   render() {
     return (
+
+
       <div className="wholeBodyContainer">
         <div className="body">
+        {console.log(this.state)}
 
-        <section class="parallax"><p>Projects</p></section>
+        <section className="parallax"><p>Projects</p></section>
 
-        <div class="projects">
-          <div class="project-boxes">Equanimity Podcast Website<br/>
-          <img src={pic} width="250" height="200" alt="screenshot of equanimity cast website"/></div>
-          <div class="project-boxes">Moon calendar<br/>
-          <img src={pic} width="250" height="200" alt="picture of darn in the desert"/></div>
-          <div class="project-boxes">Recipe Finder<br/>
-          <img src={pic} width="250" height="200" alt="picture of a mushroom"/></div>
-          <div class="project-boxes">Packing App<br/>
-          <img src={pic} width="250" height="200" alt="sandy ground with a river flowing in the background and beyond that, a cliff face. the photographer's leg is visible and bent, and shoes and hiking socks lie amongst the sand."/></div>
-          <div class="project-boxes">tic tac toe<br/><img src={pic} width="250" height="200" alt="picture of blue fabric roses in a store window"/></div>
-          <div class="project-boxes">mad libs<br/>
-          <img src={pic} width="250" height="200" alt="shells and peices of broken porcelen lie on the beach with mountains in the background"/></div>
-          <div class="project-boxes">adventure game<br/>
-          <img src={pic} width="250" height="200" alt="stalactites and stalagmites decorate the ceiling and floor of this tannish white cave."/></div>
-          <div class="project-boxes">card dealer<br/>
-          <img src={pic} width="250" height="200" alt="a pot of tea, a mug, and a handwritten letter sit on a glass table."/></div>
+
+
+        <section className="projects">
+          <div className="projectBoxes">
+          <button onClick={this.projectClickHandler}>
+            <h4>The Other Four</h4>
+            <p>Take 15 seconds to stop and smell the roses.</p>
+            <p>Created with React</p>
+            <p>February 2019</p>
+          </button>
         </div>
+        </section>
 
-        <section class="parallax"></section>
-
+        <section className="parallax-small"></section>
+        <div className="bg-modal" style={{display: this.state.displayModal ? "flex" : "none" }}>
+          <div className="modal-content">
+            <button className="modal-close" onClick={this.exitModalHandler}>+</button>
+            <iframe className="iframeModal" title="proj" src={this.state.projLink}></iframe>
+          </div>
+        </div>
 
 
         </div>
@@ -40,4 +96,8 @@ class ProjectsPage extends React.Component {
   }
 }
 
+
 export default ProjectsPage;
+
+
+// "window.open('https://nikkster311.github.io/the-other-four-v-01/');">
