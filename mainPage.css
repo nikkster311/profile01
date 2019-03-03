@@ -42,7 +42,7 @@
 
 
 .wholeBodyContainer{
-  background-color: #333;
+  /* background-color: #333; */
   justify-content: center;
   width: 100%;
   animation: fadeIn 0.5s linear forwards;
