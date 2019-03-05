@@ -4,7 +4,7 @@ import "./projectsPage.css"
 
 
 const projLinkList = [
-  {name: "The Other Four", link: "https://nikkster311.github.io/the-other-four-v-01"}
+  {name: "theOtherFour", link: "https://nikkster311.github.io/the-other-four-v-01"}
 ]
 
 var projNames = projLinkList.map(x => x.name);
@@ -16,16 +16,17 @@ class ProjectsPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      displayModal: false,
       projLink: "",
-      projName: []
+      projName: ""
     }
-  this.projectClickHandler = this.projectClickHandler.bind(this);
-  this.exitModalHandler = this.exitModalHandler.bind(this);
+  // this.projectClickHandler = this.projectClickHandler.bind(this);
   this.assignProjLink = this.assignProjLink.bind(this);
-
-
+  this.openProj = this.openProj.bind(this);
   }
+
+openProj = () => {
+  window.open(this.state.projLink);
+}
 
 //goes through projLinkList, finds name, assigns respective link to projLink
   assignProjLink = () => {
@@ -37,24 +38,20 @@ class ProjectsPage extends React.Component {
         var projLink = projLinks[key]
       }
     }
-  this.setState({link: projLink})
+  this.setState({projLink: projLink}, () => {
+    this.openProj();
+  })
   }
 
 //displays modal, sets project name to value of button clicked, runs assignProjLink
-  projectClickHandler(e) {
+  projectClickHandler(i) {
     console.log("running projectClickHandler..")
-    console.log("e.target.innerHTML = " + e.target.innerHTML)
-    this.setState({displayModal: true})
-    this.setState({projName: e.target.innerHTML}, () => {
-      console.log(this.state)
+    console.log("i = " + i)
+    this.setState({projName: i}, () => {
+      this.assignProjLink();
     })
     console.log("running assignProjLink..")
-    this.assignProjLink();
-  }
 
-//turns off modal
-  exitModalHandler = () => {
-    this.setState({displayModal: false})
   }
 
 
@@ -64,30 +61,50 @@ class ProjectsPage extends React.Component {
 
       <div className="wholeBodyContainer">
         <div className="body">
-        {console.log(this.state)}
 
         <section className="parallax"><p>Projects</p></section>
 
 
-
-        <section className="projects">
-          <div className="projectBoxes">
-          <button onClick={this.projectClickHandler}>
+        <section className="projectsSection">
+          <h2>Projects</h2>
+          <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
             <h4>The Other Four</h4>
             <p>Take 15 seconds to stop and smell the roses.</p>
             <p>Created with React</p>
             <p>February 2019</p>
-          </button>
-        </div>
+          </section>
+          <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
+            <h4>The Other Four</h4>
+            <p>Take 15 seconds to stop and smell the roses.</p>
+            <p>Created with React</p>
+            <p>February 2019</p>
+          </section>
+          <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
+            <h4>The Other Four</h4>
+            <p>Take 15 seconds to stop and smell the roses.</p>
+            <p>Created with React</p>
+            <p>February 2019</p>
+          </section>
+          <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
+            <h4>The Other Four</h4>
+            <p>Take 15 seconds to stop and smell the roses.</p>
+            <p>Created with React</p>
+            <p>February 2019</p>
+          </section>
+
+
         </section>
 
+
         <section className="parallax-small"></section>
-        <div className="bg-modal" style={{display: this.state.displayModal ? "flex" : "none" }}>
-          <div className="modal-content">
-            <button className="modal-close" onClick={this.exitModalHandler}>+</button>
-            <iframe className="iframeModal" title="proj" src={this.state.projLink}></iframe>
-          </div>
-        </div>
+
+
+        // <div className="bg-modal" style={{display: this.state.displayModal ? "flex" : "none" }}>
+        //   <div className="modal-content">
+        //     <button className="modal-close" onClick={this.exitModalHandler}>+</button>
+        //     <iframe className="iframeModal" title="proj" src={this.state.projLink}></iframe>
+        //   </div>
+        // </div>
 
 
         </div>
@@ -98,6 +115,3 @@ class ProjectsPage extends React.Component {
 
 
 export default ProjectsPage;
-
-
-// "window.open('https://nikkster311.github.io/the-other-four-v-01/');">
