@@ -1,19 +1,19 @@
-.projectBoxes {
-  background-color: #e3ede9;
-  border: 1px solid black;
-  margin: 10px;
+.indivProj {
+  color: #f2fcf8;
+  background-color: #157b48;
+  text-align: left;
+  padding: 10px;
   height: 200px;
-  width: 40%;
+  width: 100%;
   cursor: pointer;
 }
 
-.projectBoxes button{
-  background: transparent;
-  border: none;
+.indivProj:nth-child(even) {
+  background-color: #f2fcf8;
   color: #157b48;
-  cursor: pointer;
-}
+  text-align: right;
 
+}
 .body{
 
   background-color: #157b48;
