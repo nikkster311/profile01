@@ -1,10 +1,14 @@
+.content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    overflow: auto;
+}
+
 .indivProj {
   color: #f2fcf8;
   background-color: #157b48;
   text-align: left;
-  padding: 10px;
-  height: 200px;
-  width: 100%;
   cursor: pointer;
 }
 
@@ -12,7 +16,15 @@
   background-color: #f2fcf8;
   color: #157b48;
   text-align: right;
+}
 
+.content-wrap h4 {
+  font-size: 2.5em;
+}
+.content-wrap h5 {
+  font-family: "Gruppo";
+  font-size: 1.5em;
+  font-weight: 400;
 }
 .body{
 

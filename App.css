@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Alice|Allura|Amita|Architects+Daughter|Carrois+Gothic+SC|Caveat|Charm|Cormorant+SC|Dynalight|Euphoria+Script|Gochi+Hand|Gruppo|Habibi|Handlee|IM+Fell+DW+Pica+SC|IM+Fell+French+Canon+SC|IM+Fell+Great+Primer|Julius+Sans+One|Kaushan+Script|La+Belle+Aurore|Megrim|Mr+Dafoe|Over+the+Rainbow|Overlock+SC|Patrick+Hand+SC|Poiret+One|Rock+Salt|Sacramento|Sofia|Spectral+SC|Spinnaker|Syncopate|Thasadith|Zeyada');
 
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
 .App {
   grid-column: 2fr 1fr;
   background-color: #f2fcf8;
@@ -31,7 +38,7 @@
   background-size: cover;
   height: 40vh;
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: row;
   align-items: center;
