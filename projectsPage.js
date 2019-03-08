@@ -66,45 +66,45 @@ openProj = () => {
 
 
         <section className="projectsSection">
-          <h2>Projects</h2>
           <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
-            <h4>The Other Four</h4>
-            <p>Take 15 seconds to stop and smell the roses.</p>
-            <p>Created with React</p>
-            <p>February 2019</p>
+            <div className="content-wrap">
+              <h4>The Other Four</h4>
+              <h5>Take 15 seconds to stop and smell the roses.</h5>
+              <p>Created with React</p>
+              <p>February 2019</p>
+            </div>
           </section>
           <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
-            <h4>The Other Four</h4>
-            <p>Take 15 seconds to stop and smell the roses.</p>
-            <p>Created with React</p>
-            <p>February 2019</p>
+            <div className="content-wrap">
+              <h4>The Other Four</h4>
+              <h5>Take 15 seconds to stop and smell the roses.</h5>
+              <p>Created with React</p>
+              <p>February 2019</p>
+            </div>
           </section>
           <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
-            <h4>The Other Four</h4>
-            <p>Take 15 seconds to stop and smell the roses.</p>
-            <p>Created with React</p>
-            <p>February 2019</p>
+            <div className="content-wrap">
+              <h4>The Other Four</h4>
+              <h5>Take 15 seconds to stop and smell the roses.</h5>
+              <p>Created with React</p>
+              <p>February 2019</p>
+            </div>
           </section>
           <section className="indivProj" value="theOtherFour" onClick={() => this.projectClickHandler("theOtherFour")}>
-            <h4>The Other Four</h4>
-            <p>Take 15 seconds to stop and smell the roses.</p>
-            <p>Created with React</p>
-            <p>February 2019</p>
+            <div className="content-wrap">
+              <h4>The Other Four</h4>
+              <h5>Take 15 seconds to stop and smell the roses.</h5>
+              <p>Created with React</p>
+              <p>February 2019</p>
+            </div>
           </section>
-
-
         </section>
 
 
         <section className="parallax-small"></section>
 
 
-        // <div className="bg-modal" style={{display: this.state.displayModal ? "flex" : "none" }}>
-        //   <div className="modal-content">
-        //     <button className="modal-close" onClick={this.exitModalHandler}>+</button>
-        //     <iframe className="iframeModal" title="proj" src={this.state.projLink}></iframe>
-        //   </div>
-        // </div>
+
 
 
         </div>
@@ -115,3 +115,11 @@ openProj = () => {
 
 
 export default ProjectsPage;
+
+
+// <div className="bg-modal" style={{display: this.state.displayModal ? "flex" : "none" }}>
+//   <div className="modal-content">
+//     <button className="modal-close" onClick={this.exitModalHandler}>+</button>
+//     <iframe className="iframeModal" title="proj" src={this.state.projLink}></iframe>
+//   </div>
+// </div>
